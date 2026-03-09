@@ -1,0 +1,6 @@
+[
+  {
+    "label": "Run file",
+    "command": "python $ZED_FILE",
+  },
+]
