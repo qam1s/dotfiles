@@ -1,0 +1,20 @@
+[
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-c": "terminal::Copy",
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-z": ["terminal::SendKeystroke", "ctrl-c"],
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-v": "terminal::Paste",
+    },
+  },
+]
