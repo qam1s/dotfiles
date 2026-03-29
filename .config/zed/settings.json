@@ -1,8 +1,13 @@
 {
+  "agent_servers": {
+    "qwen-code": {
+      "type": "registry",
+    },
+  },
   "context_servers": {
-    "browser-tools-context-server": {
-      "enabled": true,
-      "settings": {},
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"],
     },
     "mcp-server-context7": {
       "enabled": true,
@@ -13,7 +18,7 @@
     "mcp-server-github": {
       "enabled": true,
       "settings": {
-        "github_personal_access_token": "",
+        "github_personal_access_token": "GITHUB_PERSONAL_ACCESS_TOKEN",
       },
     },
   },
@@ -23,23 +28,20 @@
     },
     "default_profile": "write",
     "default_model": {
-      "provider": "ollama",
-      "model": "qwen3.5-coder",
+      "enable_thinking": true,
+      "provider": "copilot_chat",
+      "model": "claude-haiku-4.5",
     },
     "model_parameters": [],
-  },
-  "icon_theme": {
-    "mode": "system",
-    "light": "Zed (Default)",
-    "dark": "Zed (Default)",
   },
   "theme": {
     "mode": "system",
     "light": "Catppuccin Frappé - No Italics",
     "dark": "Catppuccin Frappé - No Italics",
   },
-  "ui_font_size": 20,
   "buffer_font_size": 25.5,
+  "ui_font_size": 20,
+  "agent_buffer_font_size": 20,
   "buffer_line_height": { "custom": 1 },
   "gutter": {
     "line_numbers": false,
@@ -47,13 +49,25 @@
     "breakpoints": false,
     "folds": false,
   },
-  "tab_bar": { "show": false },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  // "title_bar": { "show": false },
+  "tab_bar": {
+    "show_tab_bar_buttons": false,
+    "show_nav_history_buttons": false,
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+  },
   "status_bar": { "experimental.show": false },
   "autosave": "on_focus_change",
   "languages": {
     "Python": {
       "format_on_save": "on",
-      "language_servers": ["basedpyright", "ruff"],
+      "language_servers": ["ruff", "ty"],
       "formatter": [
         { "language_server": { "name": "ruff" } },
         { "code_action": "source.organizeImports.ruff" },
