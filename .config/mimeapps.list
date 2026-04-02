@@ -1,0 +1,9 @@
+[Default Applications]
+application/pdf=org.mozilla.firefox.desktop
+image/png=imv.desktop
+image/jpeg=imv.desktop
+image/jpg=imv.desktop
+image/gif=imv.desktop
+image/bmp=imv.desktop
+video/mp4=mpv.desktop
+text/plain=micro.desktop
