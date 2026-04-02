@@ -1,9 +1,39 @@
 {
-  "agent_servers": {
-    "qwen-code": {
-      "type": "registry",
-    },
+  // --- ui ---
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Frappé - No Italics",
+    "dark": "Catppuccin Frappé - No Italics",
   },
+  "buffer_font_size": 21,
+  "ui_font_size": 18,
+  "agent_buffer_font_size": 15,
+  "buffer_line_height": { "custom": 1 },
+  "gutter": {
+    "line_numbers": false,
+    "runnables": false,
+    "breakpoints": false,
+    "folds": false,
+  },
+  // "title_bar": { "show": false },
+  "tab_bar": {
+    "show_pinned_tabs_in_separate_row": false,
+    "show_tab_bar_buttons": false,
+    "show_nav_history_buttons": false,
+  },
+  "toolbar": { "breadcrumbs": false, "quick_actions": false },
+  "status_bar": { "experimental.show": false },
+  "project_panel": {
+    "bold_folder_labels": true,
+    "indent_size": 10.0,
+    "entry_spacing": "standard",
+    "default_width": 200,
+  },
+  "git_panel": { "default_width": 200 },
+  "terminal": { "default_height": 9999 },
+  "unstable.ui_density": "compact",
+  // --- ai ---
+  "agent_servers": { "qwen-code": { "type": "registry" } },
   "context_servers": {
     "playwright": {
       "command": "npx",
@@ -23,50 +53,18 @@
     },
   },
   "agent": {
-    "tool_permissions": {
-      "default": "allow",
-    },
+    "default_width": 400,
+    "tool_permissions": { "default": "allow" },
     "default_profile": "write",
     "default_model": {
-      "enable_thinking": true,
-      "provider": "copilot_chat",
-      "model": "claude-haiku-4.5",
+      "enable_thinking": false,
+      "provider": "mistral",
+      "model": "codestral-latest",
     },
     "model_parameters": [],
   },
-  "edit_predictions": {
-    "mode": "subtle",
-  },
-  "theme": {
-    "mode": "system",
-    "light": "Catppuccin Frappé - No Italics",
-    "dark": "Catppuccin Frappé - No Italics",
-  },
-  "buffer_font_size": 25.5,
-  "ui_font_size": 20,
-  "agent_buffer_font_size": 20,
-  "buffer_line_height": { "custom": 1 },
-  "gutter": {
-    "line_numbers": false,
-    "runnables": false,
-    "breakpoints": false,
-    "folds": false,
-  },
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false,
-  },
-  // "title_bar": { "show": false },
-  "tab_bar": {
-    "show_tab_bar_buttons": false,
-    "show_nav_history_buttons": false,
-  },
-  "toolbar": {
-    "breadcrumbs": false,
-    "quick_actions": false,
-  },
-  "status_bar": { "experimental.show": false },
-  "autosave": "on_focus_change",
+  "edit_predictions": { "mode": "subtle" },
+  // --- format ---
   "languages": {
     "Rust": { "format_on_save": "on" },
     "Python": {
@@ -79,4 +77,7 @@
       ],
     },
   },
+  // --- other ---
+  "autosave": "on_focus_change",
+  "telemetry": { "diagnostics": false, "metrics": false },
 }
