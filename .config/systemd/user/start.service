@@ -1,0 +1,9 @@
+[Unit]
+Description=Start
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /home/qam1s/.start.sh
+
+[Install]
+WantedBy=default.target
