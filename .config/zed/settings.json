@@ -1,4 +1,5 @@
 {
+  "telemetry": { "diagnostics": false, "metrics": false },
   // --- ui ---
   "theme": {
     "mode": "system",
@@ -7,7 +8,7 @@
   },
   "buffer_font_size": 21,
   "ui_font_size": 18,
-  "agent_buffer_font_size": 15,
+  "agent_buffer_font_size": 19,
   "buffer_line_height": { "custom": 1 },
   "gutter": {
     "line_numbers": false,
@@ -15,21 +16,26 @@
     "breakpoints": false,
     "folds": false,
   },
-  // "title_bar": { "show": false },
   "tab_bar": {
-    "show_pinned_tabs_in_separate_row": false,
+    "show": false,
     "show_tab_bar_buttons": false,
     "show_nav_history_buttons": false,
   },
-  "toolbar": { "breadcrumbs": false, "quick_actions": false },
-  "status_bar": { "experimental.show": false },
+  "toolbar": { "breadcrumbs": true, "quick_actions": false },
   "project_panel": {
+    "dock": "left",
     "bold_folder_labels": true,
     "indent_size": 10.0,
     "entry_spacing": "standard",
     "default_width": 200,
   },
-  "git_panel": { "default_width": 200 },
+  "git_panel": { "dock": "left", "default_width": 200 },
+  "outline_panel": {
+    "button": false,
+  },
+  "collaboration_panel": {
+    "button": false,
+  },
   "terminal": { "default_height": 9999 },
   "unstable.ui_density": "compact",
   // --- ai ---
@@ -53,7 +59,8 @@
     },
   },
   "agent": {
-    "default_width": 400,
+    "dock": "right",
+    "default_width": 300,
     "tool_permissions": { "default": "allow" },
     "default_profile": "write",
     "default_model": {
@@ -64,7 +71,8 @@
     "model_parameters": [],
   },
   "edit_predictions": { "mode": "subtle" },
-  // --- format ---
+  // --- qa ---
+  "autosave": "on_focus_change",
   "languages": {
     "Rust": { "format_on_save": "on" },
     "Python": {
@@ -77,7 +85,4 @@
       ],
     },
   },
-  // --- other ---
-  "autosave": "on_focus_change",
-  "telemetry": { "diagnostics": false, "metrics": false },
 }
