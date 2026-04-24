@@ -1,5 +1,5 @@
 spawn-at-startup "firefox"
-spawn-at-startup "zed"
+spawn-at-startup "zeditor"
 hotkey-overlay {
     skip-at-startup
 }
