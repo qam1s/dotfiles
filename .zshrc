@@ -13,14 +13,8 @@ plugins=(
 alias rb="reboot"
 alias sdn="shutdown now"
 
-pmin() { sudo snapper create --description "pacman install $*" && sudo pacman -S "$@"; }
-pmrm() { sudo snapper create --description "pacman remove $*" && sudo pacman -Rns "$@"; }
-pmup() { sudo snapper create --description "pacman update" && sudo pacman -Syu; }
-pmse() { pacman -Ss "$@"; }
-
-prin() { sudo snapper create --description "paru install $*" && paru -S "$@"; }
-prrm() { sudo snapper create --description "paru remove $*" && paru -Rns "$@"; }
-prup() { sudo snapper create --description "paru update" && paru -Syu; }
-prse() { paru -Ss "$@"; }
+pin() { sudo snapper create --description "install $*" && paru -S "$@"; }
+prm() { sudo snapper create --description "remove $*" && paru -Rns "$@"; }
+pup() { sudo snapper create --description "update" && paru -Syu; }
 
 source $ZSH/oh-my-zsh.sh
