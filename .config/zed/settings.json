@@ -35,7 +35,7 @@
   "terminal": { "default_height": 9999 },
   "unstable.ui_density": "compact",
   // --- ai ---
-  "agent_servers": { "qwen-code": { "type": "registry" } },
+  "agent_servers": { "opencode": { "type": "registry" } },
   "context_servers": {
     "playwright": {
       "command": "npx",
@@ -66,7 +66,7 @@
     },
     "model_parameters": [],
   },
-  "edit_predictions": { "mode": "subtle", "provider": "copilot" },
+  "edit_predictions": { "mode": "subtle", "provider": "zed" },
   // --- qa ---
   "autosave": "on_focus_change",
   "languages": {
