@@ -1,5 +1,6 @@
 {
   "telemetry": { "diagnostics": false, "metrics": false },
+  "file_scan_exclusions": ["**/__pycache__", "**/.pytest_cache"],
   // --- ui ---
   "theme": {
     "mode": "system",
@@ -15,6 +16,7 @@
     "runnables": false,
     "breakpoints": false,
     "folds": false,
+    "bookmarks": false,
   },
   "tab_bar": {
     "show": false,
@@ -22,10 +24,11 @@
     "show_nav_history_buttons": false,
   },
   "toolbar": { "breadcrumbs": true, "quick_actions": false },
+  "status_bar": { "experimental.show": false },
   "project_panel": {
     "dock": "left",
     "bold_folder_labels": true,
-    "indent_size": 10.0,
+    "indent_size": 10,
     "entry_spacing": "standard",
     "default_width": 200,
   },
