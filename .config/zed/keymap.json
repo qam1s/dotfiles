@@ -1,10 +1,15 @@
 [
   {
-    "context": "Terminal",
+    "context": "ProjectPanel",
     "bindings": {
-      "ctrl-c": "terminal::Copy",
-      "ctrl-v": "terminal::Paste",
-      "ctrl-z": ["terminal::SendKeystroke", "ctrl-c"],
+      "ctrl-enter": "project_panel::OpenPermanent",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-m": "editor::GoToDiagnostic",
+      "ctrl-y": "editor::GoToDefinition",
     },
   },
   {
@@ -14,10 +19,11 @@
     },
   },
   {
-    "context": "Editor",
+    "context": "Terminal",
     "bindings": {
-      "ctrl-m": "editor::GoToDiagnostic",
-      "ctrl-y": "editor::GoToDefinition",
+      "ctrl-c": "terminal::Copy",
+      "ctrl-v": "terminal::Paste",
+      "ctrl-z": ["terminal::SendKeystroke", "ctrl-c"],
     },
   },
 ]
